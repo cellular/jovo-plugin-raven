@@ -1,5 +1,7 @@
 # Sentry integration for the Jovo Framework
 
+[![Build Status](https://travis-ci.org/cellular/jovo-plugin-raven.svg?branch=master)](https://travis-ci.org/cellular/jovo-plugin-raven)
+
 [Jovo](https://www.jovo.tech/) [Plugin](https://www.jovo.tech/docs/advanced#plugins) that sends errors to a [Sentry](https://github.com/getsentry/sentry) server using [Raven](https://github.com/getsentry/raven-node).
 
 ## Usage
