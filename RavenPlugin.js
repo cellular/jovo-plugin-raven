@@ -16,7 +16,7 @@ class RavenPlugin extends Plugin {
       ...options,
     }).install();
 
-    app.on('handlerError', (jovo, err) => {
+    function handleError(jovo, err) {
       const platform = jovo.getPlatform();
       const { data, metaData } = jovo.user();
       const context = {
@@ -41,7 +41,10 @@ class RavenPlugin extends Plugin {
       }
 
       Raven.captureException(err, context);
-    });
+    }
+
+    app.on('handlerError', handleError);
+    app.on('responseError', handleError);
 
     app.on('request', jovo => {
       // Set the ARN as environment if running as lambda
