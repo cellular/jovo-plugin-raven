@@ -30,6 +30,7 @@ class RavenPlugin extends Plugin {
           },
           extra: {
             platform: platform.getType(),
+            request: jovo.requestObj,
             session: jovo.getSessionAttributes(),
             user: { ...data, meta: metaData },
           },
