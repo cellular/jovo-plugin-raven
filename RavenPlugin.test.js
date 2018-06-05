@@ -20,6 +20,7 @@ test('RavenPlugin', done => {
   const response = {};
 
   Raven.once('send', data => {
+    console.log(data);
     expect(data).toMatchObject({
       user: { id: expect.any(String) },
       extra: {
@@ -59,5 +60,5 @@ test('RavenPlugin', done => {
         throw new Error(beep.key);
       },
     })
-  ).rejects.toThrowError();
+  ).rejects.toThrowError('boop');
 });
