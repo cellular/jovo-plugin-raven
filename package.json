@@ -15,12 +15,12 @@
     "test": "jest"
   },
   "peerDependencies": {
-    "jovo-framework": "^1.2.0"
+    "jovo-framework": "^1.2.1"
   },
   "devDependencies": {
     "cellular-lint": "^1.0.6",
     "jest": "^23.1.0",
-    "jovo-framework": "^1.2.0"
+    "jovo-framework": "^1.2.1"
   },
   "dependencies": {
     "raven": "^2.6.2"

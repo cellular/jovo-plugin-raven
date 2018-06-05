@@ -20,7 +20,6 @@ test('RavenPlugin', done => {
   const response = {};
 
   Raven.once('send', data => {
-    console.log(data);
     expect(data).toMatchObject({
       user: { id: expect.any(String) },
       extra: {
